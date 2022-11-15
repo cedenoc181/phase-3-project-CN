@@ -1,0 +1,16 @@
+
+.links {
+display:flex;
+justify-content: flex-end;
+justify-content: space-between;
+margin-left: 700px;
+margin-top: 10px;
+
+}
+
+.link {
+padding-right: 40px;
+font-size: 22px;
+color: black;
+}
+
