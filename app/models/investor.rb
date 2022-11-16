@@ -1,22 +1,29 @@
+require 'pry'
 class Investor < ActiveRecord::Base
     has_many :stocks
     has_many :companies, through: :stocks
 
+def profile
+    "#{self.name} #{self.email} #{self.password} #{self.phone} #{self.phone}"
+end
+
 def all_stocks
-    stocks.map do |stock|
-        stock.all
+    binding.pry
+    self.stocks
+        
     end
 end
 
 def self.shares_bought
-    Investor.first.stocks
+  
 end
 
 
 end
 
+#investor profile name, email, password, phone number, age
 # list of stocks
 # stocks bought
-# update watchlist
+# update watchlist/ delete
 # update number of shares
-# created stock list
+# created stock list create array >> in instances
