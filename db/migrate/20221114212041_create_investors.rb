@@ -5,7 +5,9 @@ class CreateInvestors < ActiveRecord::Migration[5.2]
       t.string :email
       t.integer :phone
       t.integer :age
-      t.string :occupation
+      t.string :password
+      t.integer :company_shares
+      t.float :total_portfolio_value
     end
   end
 end

@@ -13,21 +13,11 @@
 ActiveRecord::Schema.define(version: 2022_11_14_212050) do
 
   create_table "companies", force: :cascade do |t|
-    t.string "name"
-    t.string "ceo"
-    t.integer "employee_count"
+    t.string "company_name"
     t.string "location"
-    t.float "market_cap"
-    t.integer "price_at_close"
-    t.integer "price_at_after_hour"
-    t.integer "open_price"
-    t.integer "close_price"
-    t.string "short_term_prediction"
-    t.string "mid_term_prediction"
-    t.string "long_term_prediction"
-    t.boolean "bull"
-    t.boolean "bear"
-    t.integer "analyst"
+    t.string "sector"
+    t.string "industry"
+    t.string "exchange_short_name"
   end
 
   create_table "investors", force: :cascade do |t|
@@ -35,18 +25,20 @@ ActiveRecord::Schema.define(version: 2022_11_14_212050) do
     t.string "email"
     t.integer "phone"
     t.integer "age"
-    t.string "occupation"
+    t.string "password"
+    t.integer "company_shares"
+    t.float "total_portfolio_value"
   end
 
   create_table "stocks", force: :cascade do |t|
     t.string "ticker"
-    t.integer "shares"
-    t.float "equity"
-    t.float "total_cost"
-    t.float "market_value"
-    t.float "current_value"
+    t.integer "market_cap"
+    t.float "price"
+    t.float "volume"
+    t.float "last_annual_dividend"
     t.integer "investor_id"
     t.integer "company_id"
+    t.boolean "is_actively_trading"
   end
 
 end
