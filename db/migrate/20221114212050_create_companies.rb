@@ -4,8 +4,8 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
       t.string :company_name
       t.string :location
       t.string :sector
-      t.string :industry
-      t.string :exchange_short_name
+      t.integer :share_owned
+      t.integer :assets_under_management
     end
   end
 end

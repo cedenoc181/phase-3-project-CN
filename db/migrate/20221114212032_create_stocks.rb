@@ -6,8 +6,6 @@ class CreateStocks < ActiveRecord::Migration[5.2]
       t.float :price
       t.float :volume
       t.float :last_annual_dividend
-      t.integer :investor_id
-      t.integer :company_id
       t.boolean :is_actively_trading
     end
   end

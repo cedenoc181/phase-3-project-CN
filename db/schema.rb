@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2022_11_14_212050) do
     t.string "company_name"
     t.string "location"
     t.string "sector"
-    t.string "industry"
-    t.string "exchange_short_name"
+    t.integer "share_owned"
+    t.integer "assets_under_management"
   end
 
   create_table "investors", force: :cascade do |t|
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2022_11_14_212050) do
     t.string "password"
     t.integer "company_shares"
     t.float "total_portfolio_value"
+    t.integer "company_id"
   end
 
   create_table "stocks", force: :cascade do |t|
@@ -36,8 +37,6 @@ ActiveRecord::Schema.define(version: 2022_11_14_212050) do
     t.float "price"
     t.float "volume"
     t.float "last_annual_dividend"
-    t.integer "investor_id"
-    t.integer "company_id"
     t.boolean "is_actively_trading"
   end
 
