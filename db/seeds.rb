@@ -12,10 +12,10 @@ b3 = Investor.create(name: "chris", email: "chris@gmail.com", phone: 4567891234,
 b4 = Investor.create(name: "chad", email: "chad@gmail.com", phone: 8145555569, age: 24, password: "chair", company_shares: 310, total_portfolio_value: 40000, company_id: c2.id)
 
 puts "creating stocks..."
-Stock.create(ticker: "AAPL", market_cap: 305220000000, price: 200.14, volume: 24527123.2, last_annual_dividend: 0.92, is_actively_trading: 1)
-Stock.create(ticker: "META", market_cap: 501213000000, price: 141.52, volume: 36423519.4, last_annual_dividend: 0.88, is_actively_trading: 0)
-Stock.create(ticker: "GOOG", market_cap: 704220900000, price: 54.67, volume: 13499424.6, last_annual_dividend: 0.31, is_actively_trading: 1)
-Stock.create(ticker: "SMSG", market_cap: 101240000000, price: 99.12, volume: 25317133.7, last_annual_dividend: 0.68, is_actively_trading: 0)
+Stock.create(ticker: "AAPL", market_cap: 305220000000, price: 200.14, volume: 24527123.2, last_annual_dividend: 0.92, is_actively_trading: true)
+Stock.create(ticker: "META", market_cap: 501213000000, price: 141.52, volume: 36423519.4, last_annual_dividend: 0.88, is_actively_trading: false)
+Stock.create(ticker: "GOOG", market_cap: 704220900000, price: 54.67, volume: 13499424.6, last_annual_dividend: 0.31, is_actively_trading: true)
+Stock.create(ticker: "SMSG", market_cap: 101240000000, price: 99.12, volume: 25317133.7, last_annual_dividend: 0.68, is_actively_trading: true)
 
 
 puts "✅ Done seeding!"
