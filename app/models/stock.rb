@@ -1,23 +1,23 @@
-# require 'pry'
 class Stock < ActiveRecord::Base
     belongs_to :company
     belongs_to :investor 
 
     def self.most_expensive
+        
         self.all.max_by {|stock| stock.price}
     end
 
-    def max_cap
-        self.all.order(:market_cap).max
+    def self.max_cap
+        
+        self.all.max_by {|stock| stock.market_cap}
     end
 
-    def min_cap
-        self.all.order(:market_cap).min
+    def self.min_cap
+        self.all.min_by {|stock| stock.market_cap}
     end
 
-    def order
-        # binding.pry
-        all_stocks.sort
+    def a_to_z
+        Stock.all.sort {|a, b| a <=> b}
     end
 end
 
