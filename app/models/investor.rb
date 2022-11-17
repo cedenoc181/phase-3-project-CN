@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 class Investor < ActiveRecord::Base
     has_many :stocks
     has_many :companies, through: :stocks
@@ -8,10 +8,8 @@ def profile
 end
 
 def all_stocks
-    binding.pry
+    # binding.pry
     self.stocks
-        
-    end
 end
 
 def self.shares_bought
