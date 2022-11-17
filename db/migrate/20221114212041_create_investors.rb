@@ -8,6 +8,7 @@ class CreateInvestors < ActiveRecord::Migration[5.2]
       t.string :password
       t.integer :company_shares
       t.float :total_portfolio_value
+      t.integer :company_id
     end
   end
 end

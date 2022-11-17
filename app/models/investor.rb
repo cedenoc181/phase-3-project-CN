@@ -1,7 +1,8 @@
 # require 'pry'
 class Investor < ActiveRecord::Base
-    has_many :stocks
-    has_many :companies, through: :stocks
+    belongs_to :company
+    has_many :stocks, through: :companies
+   
 
 def profile
     "#{self.name} #{self.email} #{self.password} #{self.phone} #{self.phone}"

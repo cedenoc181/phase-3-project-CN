@@ -1,6 +1,10 @@
 class Stock < ActiveRecord::Base
-    belongs_to :company
-    belongs_to :investor 
+    has_many :companies
+    has_many :investors, through: :companies
+
+    def self.by_price
+        self.all.order(price: :desc)
+    end
 
     def self.most_expensive
         
